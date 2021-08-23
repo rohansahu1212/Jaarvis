@@ -93,7 +93,7 @@ if __name__ == '__main__':
                 speak("Here you go to youtube\n")
                 webbrowser.open("www.youtube.com")
             elif 'open github' in query:
-                speak("Here you go to youtube\n")
+                speak("Here you go to github and make world better place\n")
                 webbrowser.open("www.github.com")
             elif "whatsapp" in query:
                 speak("who you wanna send message")
