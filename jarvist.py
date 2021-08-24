@@ -112,8 +112,10 @@ if __name__ == '__main__':
                             minn = int(datetime.datetime.now().minute) + 2
                             pw.sendwhatmsg(recc,msg,hour,minn) 
                             flag = 1
-                    if flag==1:   
+                    if flag==0:   
                         speak("contact not found") 
+                    else:
+                        speak("message send successfully")
 
             elif "log off" in query or "sign out" in query:
                 speak("Ok , your pc will log off in 10 sec make sure you exit from all applications")
@@ -153,5 +155,39 @@ if __name__ == '__main__':
                         str(current_humidiy) +
                         "\n description = " +
                         str(weather_description))
+            elif "system detials" in query :
+                speak("Here you go your system details")
+                os.system("cmd /c start Ms-settings:about")
+            elif "my notifications" in query :
+                speak("here you go on your notifications")
+                os.system("cmd /c start Ms-settings:notifications")
+                
+            elif "change wallpaper" in query :
+                speak("here you go on changing wallpaper")
+                os.system("cmd /c start Ms-settings:personalizations")
+                
+            elif "my photos" in query :
+                speak("here you go on your photos")
+                os.system("cmd /c start ms-photos:")
+                
+            elif "firewall" in query :
+                speak("Here you go on windows defender firewall")
+                os.system("cmd /c start Windowsdefender:")
+            
+            elif "calculator" in query :
+                speak("here you go on calculator")
+                os.system("cmd /c start calculator:")
+            
+            elif "calender" in query :
+                speak("here you go on calender")
+                os.system("cmd /c start outlookcal:")
+            
+            elif "task management" in query :
+                speak("Here you go on task manager")
+                os.system("cmd /c start taskmgr")
+                
+            elif "action center" in query :
+                speak("here you go on your action center")
+                os.system("cmd /c start Ms-actioncenter:")
             else:
                 speak("sorry, say that again")
